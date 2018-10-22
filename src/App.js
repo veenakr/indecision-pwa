@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import IndecisionApp from './components/IndecisionApp';
+import './styles/styles.scss';
+import 'normalize.css/normalize.css';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+ReactDOM.render(<IndecisionApp />, document.getElementById('root'));
 
-export default App;
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.register();
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <IndecisionApp />
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
